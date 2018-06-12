@@ -1,13 +1,13 @@
 # Learning Semantic Sentence Embeddings using Pair-wise Discriminator
 
-Train a (EDD_LG_Shared) model  for Parapharse Question Generation. 	 For more information, please refer the  [paper](https://arxiv.org/abs/1806.00807)
+Torch code for Parapharse Question Generation. For more information, please refer the  [paper](https://arxiv.org/abs/1806.00807)
 
 ![Result](intro.png) 
 
 ### Requirements
 This code is written in Lua and requires [Torch](http://torch.ch/). The preprocssinng code is in Python, and you need to install [NLTK](http://www.nltk.org/) if you want to use NLTK to tokenize the question.
 
-- [NLTK] pip install nltk
+- pip install nltk
 
 You also need to install the following package in order to sucessfully run the code.
 
@@ -58,7 +58,18 @@ th eval.lua -input_ques_h5 data/quora_data_prepro.h5 -input_json data/quora_data
 
 ##### Metric
 
-To Evaluate Question paraphrase, you need to download the [evaluation tool](https://github.com/tylin/coco-caption). To evaluate Questio Pair , you can use script `myeval.py` under `coco-caption/` folder. If you need to evaluate based on Bleu,Meteor, Rouge and Cider score . Follow All the instruction from this link [here](https://github.com/tylin/coco-caption) 
+To Evaluate Question paraphrase, you need to download the [evaluation tool](https://github.com/tylin/coco-caption). To evaluate Questio Pair , you can use script `myeval.py` under `coco-caption/` folder. If you need to evaluate based on Bleu,Meteor, Rouge and Cider score . Follow All the instruction from this link [here](https://github.com/tylin/coco-caption)
+
+
+##### For calculating the TER score
+ This code is taken from the [OpenNMT link]( http://opennmt.net/OpenNMT/tools/scorer/)
+
+Step1: Put the results checkpoint json file inside the folder check_point_json
+Step2: Rename the check point json file to resuts_json 
+Step3: Rename the ground truth json file to quora_prepro_test_updated_int_4k
+Step4: run the ./score.sh file
+
+
 
 ### Data Files
 Download all the data files from here.
