@@ -61,7 +61,7 @@ This command will provide BLEU, METEOR, ROUGE and CIDER scores for Paraphrase Qu
 
 ##### Metric
 
-To Evaluate Question paraphrase, you need to download the [evaluation tool](https://github.com/tylin/coco-caption). To evaluate Questio Pair , you can use script `myeval.py` under `coco-caption/` folder. If you need to evaluate based on Bleu,Meteor, Rouge and Cider score . Follow All the instruction from this link [here](https://github.com/tylin/coco-caption)
+To Evaluate Question paraphrase, you need to download the [evaluation tool](https://github.com/tylin/coco-caption). To evaluate Questio Pair , you can use script `myeval.py` under `coco-caption/` folder. If you need to evaluate based on Bleu, Meteor, Rouge and CiDER scores, follow All the instruction from this link [here](https://github.com/tylin/coco-caption). You also need to download this [zip file](https://github.com/tylin/coco-caption/raw/master/pycocoevalcap/meteor/data/paraphrase-en.gz) and create a `data` directory in the `meteor` folder of `pycoevalcap` and put this downloaded file there.
 
 
 ##### For calculating the TER score
