@@ -2,6 +2,7 @@
 
 Train a (EDD_LG_Shared) model  for Parapharse Question Generation. 	 For more information, please refer the paper [https://arxiv.org/abs/1806.00807](https://arxiv.org/abs/1806.00807)
 
+![Result](intro.png) 
 
 ### Requirements
 This code is written in Lua and requires [Torch](http://torch.ch/). The preprocssinng code is in Python, and you need to install [NLTK](http://www.nltk.org/) if you want to use NLTK to tokenize the question.
@@ -21,16 +22,17 @@ We have prepared everything for you ;)
 For **Paraphrase Question Pair**:
 
 ##### Download Dataset
-We have refered  [HieCoAttenVQA](https://github.com/jiasenlu/HieCoAttenVQA) and []  to prepare our code base.
+We have referred  [neuraltalk2](https://github.com/karpathy/neuraltalk2) and [Text-to-Image Synthesis ](https://github.com/reedscot/icml2016) to prepare our code base.
 The first thing you need to do is to download the Quora Question Pairs dataset from the [Quora Question Pair website](https://data.quora.com/First-Quora-Dataset-Release-Question-Pairs) and put the same in the `data` folder. Now we need to do some preprocessing, head over to the `prepro` folder and run
+
 ```
 $ python quora_prepro.py
 ```
+
 **Note** The code given above generates json files for 100K question pairs for train, 5k question pairs for validation and 30K question pairs for Test set. 
 If you want to change this and instead use only 50K question pairs for training and rest remaining the same, then you need to make some minor changes in the above code. After this step, it will generate the files under the `data` folder. `quora_raw_train.json`, `quora_raw_val.json` and `quora_raw_test.json`
 
 ##### Generate Question Features
-
 
 ```
 $ python prepro_quora.py --input_train_json ../data/quora_raw_train.json --input_test_json ../data/quora_raw_test.json 
@@ -46,26 +48,27 @@ We have everything ready to train the Question paraphrase model. Back to the roo
 th train.lua -input_ques_h5 data/quora_data_prepro.h5 -input_json data/quora_data_prepro.json 
 ```
 
-### Evaluation
+### Evaluate the model
+In root folder run 
 
 ```
 th eval.lua -input_ques_h5 data/quora_data_prepro.h5 -input_json data/quora_data_prepro.json 
 ```
 
-##### Evaluate using Pre-trained Model
-The pre-trained model can be download [here](https://figshare.com/s/999a13965bbbd1c87cd3)
-
-```
-th eval.lua -input_ques_h5 data/quora_data_prepro.h5 -input_json data/quora_data_prepro.json --start_from [model path]
-```
-
 ##### Metric
 
-To Evaluate Question paraphrase, you need to download the [evaluation tool](https://github.com/tylin/coco-caption). To evaluate Question Pair , you can use script `myeval.py` under `coco-caption/` folder. If you need to evaluate based on BLEU, METEOR, ROUGE and CIDER score . Follow All the instruction from this link [here](https://github.com/tylin/coco-caption) 
+To Evaluate Question paraphrase, you need to download the [evaluation tool](https://github.com/tylin/coco-caption). To evaluate Questio Pair , you can use script `myeval.py` under `coco-caption/` folder. If you need to evaluate based on Bleu,Meteor, Rouge and Cider score . Follow All the instruction from this link [here](https://github.com/tylin/coco-caption) 
 
+### Data Files
+Download all the data files from [here](https://figshare.com/s/5463afb24cba05629cdf]
+- [quora_data_prepro.h5]
+- [quora_data_prepro.json]
+- [quora_raw_train.json]
+- [quora_raw_val.json]
+- [quora_raw_test.json]
 
-
-[here](https://figshare.com/s/5463afb24cba05629cdf]
+### Evaluate using Pre-trained Model
+The pre-trained model can be download [here](https://figshare.com/s/999a13965bbbd1c87cd3).
 
 
 ### Reference
@@ -86,3 +89,7 @@ If you use this code as part of any published research, please acknowledge the f
 * [Badri N. Patro][1] (badri@iitk.ac.in)
 * [Vinod K. Kurmi][2] (vinodkk@iitk.ac.in)
 * [Sandeep Kumar][3] (sandepkr@iitk.ac.in)
+
+[1]: https://github.com/badripatro
+[2]: https://github.com/vinodkkurmi
+[3]: https://github.com/krsandeep98
