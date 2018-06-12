@@ -22,11 +22,9 @@ We have prepared everything for you ;)
 
 
 ##### Download Dataset
-We have referred  [neuraltalk2](https://github.com/karpathy/neuraltalk2) and [Text-to-Image Synthesis ](https://github.com/reedscot/icml2016) to prepare our code base.
+We have referred  [neuraltalk2](https://github.com/karpathy/neuraltalk2) and [Text-to-Image Synthesis ](https://github.com/reedscot/icml2016) to prepare our code base. The first thing you need to do is to download the Quora Question Pairs dataset from the [Quora Question Pair website](https://data.quora.com/First-Quora-Dataset-Release-Question-Pairs) and put the same in the `data` folder. 
 
-The first thing you need to do is to download the Quora Question Pairs dataset from the [Quora Question Pair website](https://data.quora.com/First-Quora-Dataset-Release-Question-Pairs) and put the same in the `data` folder. 
-
-If you watn to trained from scratch countinue reading or if you want to evalute using pretrained model then head over to `Datafiles` section and download the data files (put all the data files in the `data` folder)and pretrained model( put this in the 'pretrained' folder) and run `eval.lua` 
+If you want to train from scratch continue reading or if you just want to evaluate using a pretrained model then head over to `Datafiles` section and download the data files (put all the data files in the `data` folder) and pretrained model( put this in the `pretrained` folder) and run `eval.lua` 
 
 Now we need to do some preprocessing, head over to the `prepro` folder and run
 
@@ -34,15 +32,15 @@ Now we need to do some preprocessing, head over to the `prepro` folder and run
 $ python quora_prepro.py
 ```
 
-**Note** The code given above generates json files for 100K question pairs for train, 5k question pairs for validation and 30K question pairs for Test set. 
-If you want to change this and instead use only 50K question pairs for training and rest remaining the same, then you need to make some minor changes in the above code. After this step, it will generate the files under the `data` folder. `quora_raw_train.json`, `quora_raw_val.json` and `quora_raw_test.json`
+**Note** The above command generates json files for 100K question pairs for train, 5k question pairs for validation and 30K question pairs for Test set. 
+If you want to change this and instead use only 50K question pairs for training and rest remaining the same, then you need to make some minor changes in the above file. After this step, it will generate the files under the `data` folder. `quora_raw_train.json`, `quora_raw_val.json` and `quora_raw_test.json`
 
-##### Generate Question Features
+##### Preprocess Paraphrase Question
 
 ```
 $ python prepro_quora.py --input_train_json ../data/quora_raw_train.json --input_test_json ../data/quora_raw_test.json 
 ```
-to get the question features. This will generate two files in `data/` folder, `quora_data_prepro.h5` and `quora_data_prepro.json`.
+This will generate two files in `data/` folder, `quora_data_prepro.h5` and `quora_data_prepro.json`.
 
 
 ##### Train the model
@@ -59,6 +57,7 @@ In root folder run
 ```
 th eval.lua -input_ques_h5 data/quora_data_prepro.h5 -input_json data/quora_data_prepro.json 
 ```
+This command will provide BLEU, METEOR, ROUGE, CIDER score for Question Generation.
 
 ##### Metric
 
