@@ -60,12 +60,12 @@ th eval.lua -input_ques_h5 data/quora_data_prepro.h5 -input_json data/quora_data
 To Evaluate Question paraphrase, you need to download the [evaluation tool](https://github.com/tylin/coco-caption). To evaluate Questio Pair , you can use script `myeval.py` under `coco-caption/` folder. If you need to evaluate based on Bleu,Meteor, Rouge and Cider score . Follow All the instruction from this link [here](https://github.com/tylin/coco-caption) 
 
 ### Data Files
-Download all the data files from [here](https://figshare.com/s/5463afb24cba05629cdf]
-- [quora_data_prepro.h5]
-- [quora_data_prepro.json]
-- [quora_raw_train.json]
-- [quora_raw_val.json]
-- [quora_raw_test.json]
+Download all the data files from here.
+- [quora_data_prepro.h5](https://figshare.com/s/5463afb24cba05629cdf]
+- [quora_data_prepro.json](https://figshare.com/s/5463afb24cba05629cdf]
+- [quora_raw_train.json](https://figshare.com/s/5463afb24cba05629cdf]
+- [quora_raw_val.json](https://figshare.com/s/5463afb24cba05629cdf]
+- [quora_raw_test.json](https://figshare.com/s/5463afb24cba05629cdf]
 
 ### Evaluate using Pre-trained Model
 The pre-trained model can be download [here](https://figshare.com/s/999a13965bbbd1c87cd3).
