@@ -1,6 +1,6 @@
 # Learning Semantic Sentence Embeddings using Pair-wise Discriminator
 
-Train a (EDD_LG_Shared) model  for Parapharse Question Generation. 	 For more information, please refer the paper [https://arxiv.org/abs/1806.00807](https://arxiv.org/abs/1806.00807)
+Train a (EDD_LG_Shared) model  for Parapharse Question Generation. 	 For more information, please refer the  [paper](https://arxiv.org/abs/1806.00807)
 
 ![Result](intro.png) 
 
