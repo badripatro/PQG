@@ -20,7 +20,6 @@ You also need to install the following package in order to sucessfully run the c
 
 We have prepared everything for you ;)
 
-For **Paraphrase Question Pair**:
 
 ##### Download Dataset
 We have referred  [neuraltalk2](https://github.com/karpathy/neuraltalk2) and [Text-to-Image Synthesis ](https://github.com/reedscot/icml2016) to prepare our code base.
