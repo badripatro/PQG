@@ -57,7 +57,7 @@ In root folder run
 ```
 th eval.lua -input_ques_h5 data/quora_data_prepro.h5 -input_json data/quora_data_prepro.json 
 ```
-This command will provide BLEU, METEOR, ROUGE, CIDER score for Question Generation.
+This command will provide BLEU, METEOR, ROUGE and CIDER scores for Paraphrase Question Generation.
 
 ##### Metric
 
@@ -87,7 +87,7 @@ Download all the data files from here.
 - [quora_raw_test.json](https://figshare.com/s/5463afb24cba05629cdf)
 
 ### Evaluate using Pre-trained Model
-The pre-trained model can be download [here](https://figshare.com/s/999a13965bbbd1c87cd3).
+The pre-trained model can be downloaded [here](https://figshare.com/s/999a13965bbbd1c87cd3).
 
 
 ### Reference
