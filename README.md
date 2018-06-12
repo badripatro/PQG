@@ -62,7 +62,7 @@ To Evaluate Question paraphrase, you need to download the [evaluation tool](http
 
 
 ##### For calculating the TER score
- This code is taken from the [OpenNMT link]( http://opennmt.net/OpenNMT/tools/scorer/)
+ This code is taken from the [OpenNMT repo]( http://opennmt.net/OpenNMT/tools/scorer/)
 
 Step1: Put the results checkpoint json file inside the folder check_point_json
 
