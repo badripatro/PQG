@@ -70,7 +70,7 @@ Step2: Rename the check point json file to resuts_json
 
 Step3: Rename the ground truth json file to quora_prepro_test_updated_int_4k
 
-Step4: run the ./score.sh file
+Step4: Run the ./score.sh file
 
 
 
