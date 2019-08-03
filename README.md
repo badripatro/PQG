@@ -95,10 +95,11 @@ The pre-trained model can be downloaded [here](https://figshare.com/s/999a13965b
 If you use this code as part of any published research, please acknowledge the following paper
 
 ```
-@article{patro2018learning,
-  title={Learning Semantic Sentence Embeddings using Pair-wise Discriminator},
-  author={Patro, Badri N and Kurmi, Vinod K and Kumar, Sandeep and Namboodiri, Vinay P},
-  journal={arXiv preprint arXiv:1806.00807},
+@inproceedings{patro2018learning,
+  title={Learning Semantic Sentence Embeddings using Sequential Pair-wise Discriminator},
+  author={Patro, Badri Narayana and Kurmi, Vinod Kumar and Kumar, Sandeep and Namboodiri, Vinay},
+  booktitle={Proceedings of the 27th International Conference on Computational Linguistics},
+  pages={2715--2729},
   year={2018}
 }
 ```
