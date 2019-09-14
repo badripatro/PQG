@@ -1,4 +1,4 @@
-# Learning Semantic Sentence Embeddings using Pair-wise Discriminator [ [COLING-2018](https://aclanthology.info/papers/C18-1230/c18-1230)]
+# Learning Semantic Sentence Embeddings using Pair-wise Discriminator [ [COLING-2018](https://aclanthology.info/papers/C18-1230)]
 
 Torch code for Parapharse Question Generation. For more information, please refer the  [paper](https://arxiv.org/abs/1806.00807)
 
